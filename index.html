@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點數價值認知問卷調查平台</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- 自訂題目樣式 -->
+    <style>
+        form .statement {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 30px 0 0 4.25%;
+            margin-bottom: 10px;
+        }
+
+        form .likert {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            padding: 0 0 35px;
+            display: block;
+            border-bottom: 2px solid #efefef;
+        }
+
+        form .likert:last-of-type {
+            border-bottom: 0;
+        }
+
+        form .likert:before {
+            content: '';
+            position: relative;
+            top: 9px;
+            left: 11%;
+            display: block;
+            background-color: #efefef;
+            height: 4px;
+            width: 79%;
+        }
+
+        form .likert li {
+            display: inline-block;
+            width: 19%;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        form .likert li input[type=radio] {
+            display: block;
+            position: relative;
+            top: 0;
+            left: 50%;
+            margin-left: -6px;
+
+        }
+
+        form .likert li label {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="p-3 text-center bg-light">
+        <h1 class="mb-3">點數價值認知問卷調查</h1>
+        <br>
+        <form action="#">
+
+            <!-- OPENPOINT part -->
+            <div class="card">
+                <div class="card-header">
+                    OPENPOINT使用調查
+                </div>
+                <label class="statement">最近一次使用OPENPOINT進行集點或兌點時間？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_a1" value="5">
+                        <label>一天內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a1" value="4">
+                        <label>三天內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a1" value="3">
+                        <label>一週內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a1" value="2">
+                        <label>二週內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a1" value="1">
+                        <label>超過兩週</label>
+                    </li>
+                </ul>
+
+
+                <label class="statement">一個月內使用OPENPOINT進行集點或兌點次數？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_a2" value="5">
+                        <label>使用21次以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a2" value="4">
+                        <label>使用11~20次以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a2" value="3">
+                        <label>使用6~10次</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a2" value="2">
+                        <label>使用1~5次</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a2" value="1">
+                        <label>沒有使用</label>
+                    </li>
+                </ul>
+
+
+                <label class="statement">近期使用OPENPOINT進行集點的金額？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_a3" value="5">
+                        <label>1000元以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a3" value="4">
+                        <label>601元~ 1000元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a3" value="3">
+                        <label>301元~ 600元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a3" value="2">
+                        <label>101元~ 300元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_a3" value="1">
+                        <label>100元以下</label>
+                    </li>
+                </ul>
+            </div><br><br>
+
+            <!-- LINE POINTS part -->
+            <div class="card">
+                <div class="card-header">
+                    LINE POINTS使用調查
+                </div>
+                <label class="statement">最近一次使用LINE POINTS進行集點或兌點時間？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_b1" value="5">
+                        <label>一天內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b1" value="4">
+                        <label>三天內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b1" value="3">
+                        <label>一週內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b1" value="2">
+                        <label>二週內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b1" value="1">
+                        <label>超過兩週</label>
+                    </li>
+                </ul>
+
+                <label class="statement">一個月內使用LINE POINTS進行集點或兌點次數？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_b2" value="5">
+                        <label>使用21次以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b2" value="4">
+                        <label>使用11~20次以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b2" value="3">
+                        <label>使用6~10次</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b2" value="2">
+                        <label>使用1~5次</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b2" value="1">
+                        <label>沒有使用</label>
+                    </li>
+                </ul>
+
+                <label class="statement">近期使用LINE POINTS進行集點的金額？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_b3" value="5">
+                        <label>1000元以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b3" value="4">
+                        <label>601元~ 1000元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b3" value="3">
+                        <label>301元~ 600元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b3" value="2">
+                        <label>101元~ 300元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_b3" value="1">
+                        <label>100元以下</label>
+                    </li>
+                </ul>
+            </div><br><br>
+
+            <!-- MOMO part -->
+            <div class="card">
+                <div class="card-header">
+                    MOMO使用調查
+                </div>
+                <label class="statement">最近一次使用MOMO進行集點或兌點時間？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_c1" value="5">
+                        <label>一天內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c1" value="4">
+                        <label>三天內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c1" value="3">
+                        <label>一週內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c1" value="2">
+                        <label>二週內</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c1" value="1">
+                        <label>超過兩週</label>
+                    </li>
+                </ul>
+
+                <label class="statement">一個月內使用MOMO進行集點或兌點次數？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_c2" value="5">
+                        <label>使用21次以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c2" value="4">
+                        <label>使用11~20次以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c2" value="3">
+                        <label>使用6~10次</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c2" value="2">
+                        <label>使用1~5次</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c2" value="1">
+                        <label>沒有使用</label>
+                    </li>
+                </ul>
+
+                <label class="statement">近期使用MOMO進行集點的金額？</label>
+                <ul class='likert'>
+                    <li>
+                        <input type="radio" required name="aka_c3" value="5">
+                        <label>1000元以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c3" value="4">
+                        <label>601元~ 1000元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c3" value="3">
+                        <label>301元~ 600元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c3" value="2">
+                        <label>101元~ 300元</label>
+                    </li>
+                    <li>
+                        <input type="radio" required name="aka_c3" value="1">
+                        <label>100元以下</label>
+                    </li>
+                </ul>
+            </div>
+            <div style="margin-top: 50px">
+                <button type="submit" class="btn btn-primary btn-lg">接下頁問卷</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("form").submit(function (e) {
+            var a1 = $('input:radio[name=aka_a1]:checked').val();
+            var a2 = $('input:radio[name=aka_a2]:checked').val();
+            var a3 = $('input:radio[name=aka_a3]:checked').val();
+            var b1 = $('input:radio[name=aka_b1]:checked').val();
+            var b2 = $('input:radio[name=aka_b2]:checked').val();
+            var b3 = $('input:radio[name=aka_b3]:checked').val();
+            var c1 = $('input:radio[name=aka_c1]:checked').val();
+            var c2 = $('input:radio[name=aka_c2]:checked').val();
+            var c3 = $('input:radio[name=aka_c3]:checked').val();
+
+            var a, b, c;
+            a = parseInt(a1) + parseInt(a2) + parseInt(a3);
+            b = parseInt(b1) + parseInt(b2) + parseInt(b3);
+            c = parseInt(c1) + parseInt(c2) + parseInt(c3);
+
+            var url1 = 'https://www.surveycake.com/s/y8Dgp'; //OP
+            var url2 = 'https://www.surveycake.com/s/qNAam'; //LINE
+            var url3 = 'https://www.surveycake.com/s/peDLn'; //MOMO
+            var url4 = 'https://www.surveycake.com/s/xxA0p'; //綜合
+
+            if (a > b) {
+                if (a > c) {
+                    //A最大
+                    $("form").attr('action', url1);
+                } else if (a < c) {
+                    //C最大
+                    $("form").attr('action', url3);
+                } else {
+                    //一樣大
+                    $("form").attr('action', url4);
+                }
+            } else if (a < b) {
+                if (b > c) {
+                    // B最大
+                    $("form").attr('action', url2);
+                } else if (b < c) {
+                    //C最大
+                    $("form").attr('action', url3);
+                } else {
+                    //一樣大
+                    $("form").attr('action', url4);
+                }
+            } else {
+                //一樣大
+                $("form").attr('action', url4);
+            }
+
+        })
+    });
+</script>
+
+</html>
