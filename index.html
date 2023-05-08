@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
@@ -351,23 +351,28 @@
                     //C最大
                     $("form").attr('action', url3);
                 } else {
-                    //一樣大
+                    //AC一樣大
                     $("form").attr('action', url4);
                 }
             } else if (a < b) {
                 if (b > c) {
-                    // B最大
+                    //B最大
                     $("form").attr('action', url2);
                 } else if (b < c) {
                     //C最大
                     $("form").attr('action', url3);
                 } else {
-                    //一樣大
+                    //BC一樣大
                     $("form").attr('action', url4);
                 }
             } else {
-                //一樣大
-                $("form").attr('action', url4);
+                if (a < c) {
+                    //C最大
+                    $("form").attr('action', url3);
+                } else {
+                    //AB一樣大
+                    $("form").attr('action', url4);
+                }
             }
 
         })
